@@ -1,0 +1,27 @@
+import scrapy
+
+
+class PropertyItem(scrapy.Item):
+    title = scrapy.Field()
+    location = scrapy.Field()
+    operator = scrapy.Field()
+    type = scrapy.Field()
+    available_seats = scrapy.Field()
+    address = scrapy.Field()
+    total_seats = scrapy.Field()
+    occupancy_certificate = scrapy.Field()
+    fire_noc = scrapy.Field()
+    parking_facility = scrapy.Field()
+    total_built_up_area = scrapy.Field()
+    area_available = scrapy.Field()
+    possession_status = scrapy.Field()
+    no_of_floors = scrapy.Field()
+    per_floor_area = scrapy.Field()
+    year_of_completion = scrapy.Field()
+    about_project = scrapy.Field()
+    floor_plan = scrapy.Field()
+    amenities = scrapy.Field()
+    location_map = scrapy.Field()
+    property_url = scrapy.Field()
+    scraped_at = scrapy.Field()
+    source_page = scrapy.Field()

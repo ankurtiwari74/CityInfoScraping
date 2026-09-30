@@ -1,0 +1,488 @@
+2026-09-21 11:08:16 [scrapy.utils.log] INFO: Scrapy 2.19.0 started (bot: cityinfo)
+2026-09-21 11:08:16 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.1.3',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.5.0',
+ 'parsel': '1.11.0',
+ 'w3lib': '2.4.1',
+ 'Twisted': '26.4.0',
+ 'Python': '3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, '
+           '14:30:20) [Clang 20.1.8 ]',
+ 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.2 25 Aug 2026)',
+ 'cryptography': '50.0.1',
+ 'Platform': 'macOS-27.0-arm64-arm-64bit-Mach-O'}
+2026-09-21 11:08:16 [scrapy.addons] INFO: Enabled addons:
+[<scrapy_zyte_api.addon.Addon object at 0x109344440>]
+2026-09-21 11:08:16 [scrapy.extensions.telnet] INFO: Telnet Password: 4ae21015bcda656a
+2026-09-21 11:08:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.spiderstate.SpiderState',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'scrapy.extensions.remote_control.RemoteControl']
+2026-09-21 11:08:16 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 20,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 4.0,
+ 'BOT_NAME': 'cityinfo',
+ 'CONCURRENT_REQUESTS': 8,
+ 'DOWNLOAD_DELAY': 0.5,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'JOBDIR': 'crawls/properties',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'cityinfo.spiders',
+ 'REQUEST_FINGERPRINTER_CLASS': 'scrapy_zyte_api.ScrapyZyteAPIRequestFingerprinter',
+ 'RETRY_TIMES': 3,
+ 'SPIDER_MODULES': ['cityinfo.spiders']}
+2026-09-21 11:08:16 [scrapy_zyte_api.handler] INFO: Using a Zyte API key starting with 'e3ac944'
+2026-09-21 11:08:16 [scrapy_zyte_api.handler] INFO: Using a Zyte API key starting with 'e3ac944'
+2026-09-21 11:08:16 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ <class 'scrapy_zyte_api._session.ScrapyZyteAPISessionResetterDownloaderMiddleware'>,
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ <class 'scrapy_zyte_api._middlewares.ScrapyZyteAPIDownloaderMiddleware'>,
+ <class 'scrapy_zyte_api._session.ScrapyZyteAPISessionDownloaderMiddleware'>,
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-09-21 11:08:16 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ <class 'scrapy_zyte_api._middlewares.ScrapyZyteAPISpiderMiddleware'>,
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware',
+ 'scrapy.spidermiddlewares.metacopy.MetaCopyDetectionMiddleware',
+ <class 'scrapy_zyte_api._middlewares.ScrapyZyteAPIRefererSpiderMiddleware'>]
+2026-09-21 11:08:16 [scrapy.middleware] INFO: Enabled item pipelines:
+['cityinfo.pipelines.CleaningPipeline',
+ 'cityinfo.pipelines.JsonlWriterPipeline']
+2026-09-21 11:08:16 [py.warnings] WARNING: /Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/pipelines/__init__.py:66: ScrapyDeprecationWarning: CleaningPipeline.process_item() requires a spider argument, this is deprecated and the argument will not be passed in future Scrapy versions. If you need to access the spider instance you can save the crawler instance passed to from_crawler() and use its spider attribute.
+  self._check_mw_method_spider_arg(mw.process_item)
+
+2026-09-21 11:08:16 [py.warnings] WARNING: /Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/pipelines/__init__.py:60: ScrapyDeprecationWarning: JsonlWriterPipeline.open_spider() requires a spider argument, this is deprecated and the argument will not be passed in future Scrapy versions. If you need to access the spider instance you can save the crawler instance passed to from_crawler() and use its spider attribute.
+  self._check_mw_method_spider_arg(mw.open_spider)
+
+2026-09-21 11:08:16 [py.warnings] WARNING: /Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/pipelines/__init__.py:63: ScrapyDeprecationWarning: JsonlWriterPipeline.close_spider() requires a spider argument, this is deprecated and the argument will not be passed in future Scrapy versions. If you need to access the spider instance you can save the crawler instance passed to from_crawler() and use its spider attribute.
+  self._check_mw_method_spider_arg(mw.close_spider)
+
+2026-09-21 11:08:16 [py.warnings] WARNING: /Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/pipelines/__init__.py:66: ScrapyDeprecationWarning: JsonlWriterPipeline.process_item() requires a spider argument, this is deprecated and the argument will not be passed in future Scrapy versions. If you need to access the spider instance you can save the crawler instance passed to from_crawler() and use its spider attribute.
+  self._check_mw_method_spider_arg(mw.process_item)
+
+2026-09-21 11:08:16 [scrapy.core.engine] INFO: Spider opened
+2026-09-21 11:08:16 [cityinfo.pipelines] INFO: Resuming with 0 previously-seen property URLs.
+2026-09-21 11:08:16 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-09-21 11:08:16 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-09-21 11:08:16 [scrapy.extensions.remote_control] INFO: Remote control HTTP server listening on port 60062 (job 6440-0fc5a812b21947349795e08147676fd3)
+2026-09-21 11:08:42 [cityinfo.sessions] INFO: Zyte session login succeeded (session init request).
+2026-09-21 11:08:45 [cityinfo.spiders.properties] INFO: Login verified: logged-out marker absent on https://properties.cityinfoservices.com/properties-for-rent-in-bangalore/srp
+2026-09-21 11:08:46 [cityinfo.spiders.properties] INFO: page 1 -> 30 links (30 new)
+2026-09-21 11:08:52 [cityinfo.spiders.properties] INFO: page 2 -> 10 links (10 new)
+2026-09-21 11:08:54 [cityinfo.spiders.properties] INFO: page 3 -> 10 links (10 new)
+2026-09-21 11:09:00 [cityinfo.spiders.properties] INFO: page 4 -> 10 links (10 new)
+2026-09-21 11:09:05 [cityinfo.spiders.properties] INFO: page 5 -> 10 links (10 new)
+2026-09-21 11:09:16 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 17 pages/min), scraped 11 items (at 11 items/min)
+2026-09-21 11:09:21 [cityinfo.spiders.properties] INFO: page 6 -> 10 links (10 new)
+2026-09-21 11:09:25 [cityinfo.spiders.properties] INFO: page 7 -> 10 links (10 new)
+2026-09-21 11:09:45 [cityinfo.spiders.properties] INFO: page 8 -> 10 links (10 new)
+2026-09-21 11:09:47 [cityinfo.spiders.properties] INFO: page 9 -> 10 links (10 new)
+2026-09-21 11:09:49 [cityinfo.spiders.properties] INFO: page 10 -> 10 links (10 new)
+2026-09-21 11:09:52 [cityinfo.spiders.properties] INFO: page 11 -> 10 links (10 new)
+2026-09-21 11:09:54 [cityinfo.spiders.properties] INFO: page 12 -> 10 links (10 new)
+2026-09-21 11:09:58 [cityinfo.spiders.properties] INFO: page 13 -> 10 links (10 new)
+2026-09-21 11:10:01 [cityinfo.spiders.properties] INFO: page 14 -> 10 links (10 new)
+2026-09-21 11:10:04 [cityinfo.spiders.properties] INFO: page 15 -> 10 links (10 new)
+2026-09-21 11:10:07 [cityinfo.spiders.properties] INFO: page 16 -> 10 links (10 new)
+2026-09-21 11:10:16 [scrapy.extensions.logstats] INFO: Crawled 77 pages (at 60 pages/min), scraped 60 items (at 49 items/min)
+2026-09-21 11:10:24 [cityinfo.spiders.properties] INFO: page 17 -> 10 links (10 new)
+2026-09-21 11:10:27 [cityinfo.spiders.properties] INFO: page 18 -> 10 links (10 new)
+2026-09-21 11:10:29 [cityinfo.spiders.properties] INFO: page 19 -> 10 links (10 new)
+2026-09-21 11:10:39 [cityinfo.spiders.properties] INFO: page 20 -> 10 links (10 new)
+2026-09-21 11:10:45 [cityinfo.spiders.properties] INFO: page 21 -> 10 links (10 new)
+2026-09-21 11:10:47 [cityinfo.spiders.properties] INFO: page 22 -> 10 links (10 new)
+2026-09-21 11:10:49 [cityinfo.spiders.properties] INFO: page 23 -> 10 links (10 new)
+2026-09-21 11:10:54 [cityinfo.spiders.properties] INFO: page 24 -> 10 links (10 new)
+2026-09-21 11:10:57 [cityinfo.spiders.properties] INFO: page 25 -> 10 links (10 new)
+2026-09-21 11:11:02 [cityinfo.spiders.properties] INFO: page 26 -> 10 links (10 new)
+2026-09-21 11:11:16 [scrapy.extensions.logstats] INFO: Crawled 132 pages (at 55 pages/min), scraped 105 items (at 45 items/min)
+2026-09-21 11:12:16 [scrapy.extensions.logstats] INFO: Crawled 203 pages (at 71 pages/min), scraped 176 items (at 71 items/min)
+2026-09-21 11:13:16 [scrapy.extensions.logstats] INFO: Crawled 267 pages (at 64 pages/min), scraped 240 items (at 64 items/min)
+2026-09-21 11:14:14 [cityinfo.spiders.properties] INFO: page 27 -> 10 links (10 new)
+2026-09-21 11:14:16 [scrapy.extensions.logstats] INFO: Crawled 302 pages (at 35 pages/min), scraped 274 items (at 34 items/min)
+2026-09-21 11:14:16 [cityinfo.spiders.properties] INFO: page 28 -> 10 links (10 new)
+2026-09-21 11:14:43 [cityinfo.spiders.properties] INFO: page 29 -> 10 links (10 new)
+2026-09-21 11:14:48 [cityinfo.spiders.properties] INFO: page 30 -> 10 links (10 new)
+2026-09-21 11:14:52 [cityinfo.spiders.properties] INFO: page 31 -> 10 links (10 new)
+2026-09-21 11:14:55 [cityinfo.spiders.properties] INFO: page 32 -> 10 links (10 new)
+2026-09-21 11:15:07 [cityinfo.spiders.properties] INFO: page 33 -> 10 links (10 new)
+2026-09-21 11:15:10 [cityinfo.spiders.properties] INFO: page 34 -> 10 links (10 new)
+2026-09-21 11:15:16 [scrapy.extensions.logstats] INFO: Crawled 341 pages (at 39 pages/min), scraped 306 items (at 32 items/min)
+2026-09-21 11:15:27 [cityinfo.spiders.properties] INFO: page 35 -> 10 links (10 new)
+2026-09-21 11:15:34 [cityinfo.spiders.properties] INFO: page 36 -> 10 links (10 new)
+2026-09-21 11:15:39 [cityinfo.spiders.properties] INFO: page 37 -> 10 links (10 new)
+2026-09-21 11:15:45 [cityinfo.spiders.properties] INFO: page 38 -> 10 links (10 new)
+2026-09-21 11:15:47 [cityinfo.spiders.properties] INFO: page 39 -> 10 links (10 new)
+2026-09-21 11:15:53 [cityinfo.spiders.properties] INFO: page 40 -> 10 links (10 new)
+2026-09-21 11:15:58 [cityinfo.spiders.properties] INFO: page 41 -> 10 links (10 new)
+2026-09-21 11:16:16 [scrapy.extensions.logstats] INFO: Crawled 380 pages (at 39 pages/min), scraped 338 items (at 32 items/min)
+2026-09-21 11:17:16 [scrapy.extensions.logstats] INFO: Crawled 380 pages (at 0 pages/min), scraped 338 items (at 0 items/min)
+2026-09-21 11:17:17 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:17:23 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:17:24 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:17:28 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:17:29 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:17:32 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:17:34 [cityinfo.spiders.properties] ERROR: Request failed: [Failure instance: Traceback: <class 'RuntimeError'>: Could not get a session ID from the session rotation queue after 60 attempts, waiting at least 1.0 seconds between attempts. See https://scrapy-zyte-api.readthedocs.io/en/latest/usage/session.html#session-troubleshooting-could-not-get-session-id
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/engine.py:514:_download
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1834:_inlineCallbacks
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/python/failure.py:467:throwExceptionIntoGenerator
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/__init__.py:226:fetch
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/twisted/internet/defer.py:1247:adapt
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:87:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:156:_process_exception
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:80:download_async
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy/core/downloader/middleware.py:103:_process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1399:process_request
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1322:assign
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1200:_next
+/Volumes/Crucial/ankurtiwari/Documents/02_PycharmProjects/01_CityInfoScraping/cityinfo_scraper/venv/lib/python3.14/site-packages/scrapy_zyte_api/_session.py:1161:_next_from_queue
+]
+2026-09-21 11:18:06 [cityinfo.sessions] INFO: Zyte session login succeeded (session init request).
+2026-09-21 11:18:16 [scrapy.extensions.logstats] INFO: Crawled 391 pages (at 11 pages/min), scraped 348 items (at 10 items/min)
+2026-09-21 11:18:51 [cityinfo.spiders.properties] INFO: page 42 -> 10 links (10 new)
+2026-09-21 11:18:59 [cityinfo.spiders.properties] INFO: page 43 -> 10 links (10 new)
+2026-09-21 11:19:00 [cityinfo.spiders.properties] INFO: page 44 -> 10 links (10 new)
+2026-09-21 11:19:04 [cityinfo.spiders.properties] INFO: page 45 -> 10 links (10 new)
+2026-09-21 11:19:07 [cityinfo.spiders.properties] INFO: page 46 -> 10 links (10 new)
+2026-09-21 11:19:11 [cityinfo.spiders.properties] INFO: page 47 -> 10 links (10 new)
+2026-09-21 11:19:14 [cityinfo.spiders.properties] INFO: page 48 -> 10 links (10 new)
+2026-09-21 11:19:16 [scrapy.extensions.logstats] INFO: Crawled 504 pages (at 113 pages/min), scraped 454 items (at 106 items/min)
+2026-09-21 11:19:16 [cityinfo.spiders.properties] INFO: page 49 -> 10 links (10 new)
+2026-09-21 11:19:19 [cityinfo.spiders.properties] INFO: page 50 -> 10 links (10 new)
+2026-09-21 11:19:21 [cityinfo.spiders.properties] INFO: page 51 -> 10 links (10 new)
+2026-09-21 11:19:26 [cityinfo.spiders.properties] INFO: page 52 -> 10 links (10 new)
+2026-09-21 11:19:29 [cityinfo.spiders.properties] INFO: page 53 -> 10 links (10 new)
+2026-09-21 11:19:33 [cityinfo.spiders.properties] INFO: page 54 -> 10 links (10 new)
+2026-09-21 11:19:36 [cityinfo.spiders.properties] INFO: page 55 -> 10 links (10 new)
+2026-09-21 11:19:41 [cityinfo.spiders.properties] INFO: page 56 -> 10 links (10 new)
+2026-09-21 11:19:45 [cityinfo.spiders.properties] INFO: page 57 -> 10 links (10 new)
+2026-09-21 11:19:49 [cityinfo.spiders.properties] INFO: page 58 -> 10 links (10 new)
+2026-09-21 11:19:52 [cityinfo.spiders.properties] INFO: page 59 -> 10 links (10 new)
+2026-09-21 11:20:02 [cityinfo.spiders.properties] INFO: page 60 -> 10 links (10 new)
+2026-09-21 11:20:05 [cityinfo.spiders.properties] INFO: page 61 -> 10 links (10 new)
+2026-09-21 11:20:11 [cityinfo.spiders.properties] INFO: page 62 -> 10 links (10 new)
+2026-09-21 11:20:16 [scrapy.extensions.logstats] INFO: Crawled 597 pages (at 93 pages/min), scraped 533 items (at 79 items/min)
+2026-09-21 11:20:24 [cityinfo.spiders.properties] INFO: page 63 -> 10 links (10 new)
+2026-09-21 11:20:29 [cityinfo.spiders.properties] INFO: page 64 -> 10 links (10 new)
+2026-09-21 11:20:33 [cityinfo.spiders.properties] INFO: page 65 -> 10 links (10 new)
+2026-09-21 11:20:40 [cityinfo.spiders.properties] INFO: page 66 -> 10 links (10 new)
+2026-09-21 11:20:46 [cityinfo.spiders.properties] INFO: page 67 -> 10 links (10 new)
+2026-09-21 11:20:50 [cityinfo.spiders.properties] INFO: page 68 -> 10 links (10 new)
+2026-09-21 11:20:55 [cityinfo.spiders.properties] INFO: page 69 -> 10 links (10 new)
+2026-09-21 11:20:59 [cityinfo.spiders.properties] INFO: page 70 -> 10 links (10 new)
+2026-09-21 11:21:04 [cityinfo.spiders.properties] INFO: page 71 -> 10 links (10 new)
+2026-09-21 11:21:08 [cityinfo.spiders.properties] INFO: page 72 -> 10 links (10 new)
+2026-09-21 11:21:15 [cityinfo.spiders.properties] INFO: page 73 -> 10 links (10 new)
+2026-09-21 11:21:16 [scrapy.extensions.logstats] INFO: Crawled 664 pages (at 67 pages/min), scraped 589 items (at 56 items/min)
+2026-09-21 11:21:20 [cityinfo.spiders.properties] INFO: page 74 -> 10 links (10 new)
+2026-09-21 11:21:26 [cityinfo.spiders.properties] INFO: page 75 -> 10 links (10 new)
+2026-09-21 11:21:30 [cityinfo.spiders.properties] INFO: page 76 -> 10 links (10 new)
+2026-09-21 11:21:34 [cityinfo.spiders.properties] INFO: page 77 -> 10 links (10 new)
+2026-09-21 11:21:37 [cityinfo.spiders.properties] INFO: page 78 -> 10 links (10 new)
+2026-09-21 11:21:41 [cityinfo.spiders.properties] INFO: page 79 -> 10 links (10 new)
+2026-09-21 11:21:45 [cityinfo.spiders.properties] INFO: page 80 -> 10 links (10 new)
+2026-09-21 11:21:48 [cityinfo.spiders.properties] INFO: page 81 -> 10 links (10 new)
+2026-09-21 11:21:52 [cityinfo.spiders.properties] INFO: page 82 -> 10 links (10 new)
+2026-09-21 11:21:57 [cityinfo.spiders.properties] INFO: page 83 -> 10 links (10 new)
+2026-09-21 11:22:00 [cityinfo.spiders.properties] INFO: page 84 -> 10 links (10 new)
+2026-09-21 11:22:03 [cityinfo.spiders.properties] INFO: page 85 -> 10 links (10 new)
+2026-09-21 11:22:06 [cityinfo.spiders.properties] INFO: page 86 -> 10 links (10 new)
+2026-09-21 11:22:10 [cityinfo.spiders.properties] INFO: page 87 -> 10 links (10 new)
+2026-09-21 11:22:14 [cityinfo.spiders.properties] INFO: page 88 -> 10 links (10 new)
+2026-09-21 11:22:16 [scrapy.extensions.logstats] INFO: Crawled 729 pages (at 65 pages/min), scraped 639 items (at 50 items/min)
+2026-09-21 11:22:19 [cityinfo.spiders.properties] INFO: page 89 -> 10 links (10 new)
+2026-09-21 11:22:23 [cityinfo.spiders.properties] INFO: page 90 -> 10 links (10 new)
+2026-09-21 11:22:30 [cityinfo.spiders.properties] INFO: page 91 -> 10 links (10 new)
+2026-09-21 11:22:41 [cityinfo.spiders.properties] INFO: page 92 -> 10 links (10 new)
+2026-09-21 11:22:44 [cityinfo.spiders.properties] INFO: page 93 -> 10 links (10 new)
+2026-09-21 11:22:48 [cityinfo.spiders.properties] INFO: page 94 -> 10 links (10 new)
+2026-09-21 11:22:52 [cityinfo.spiders.properties] INFO: page 95 -> 10 links (10 new)
+2026-09-21 11:23:01 [cityinfo.spiders.properties] INFO: page 96 -> 10 links (10 new)
+2026-09-21 11:23:05 [cityinfo.spiders.properties] INFO: page 97 -> 10 links (10 new)
+2026-09-21 11:23:13 [cityinfo.spiders.properties] INFO: page 98 -> 10 links (10 new)
+2026-09-21 11:23:16 [scrapy.extensions.logstats] INFO: Crawled 797 pages (at 68 pages/min), scraped 697 items (at 58 items/min)
+2026-09-21 11:23:20 [cityinfo.spiders.properties] INFO: page 99 -> 10 links (10 new)
+2026-09-21 11:23:26 [cityinfo.spiders.properties] INFO: page 100 -> 10 links (10 new)
+2026-09-21 11:23:33 [cityinfo.spiders.properties] INFO: page 101 -> 10 links (10 new)
+2026-09-21 11:23:38 [cityinfo.spiders.properties] INFO: page 102 -> 10 links (10 new)
+2026-09-21 11:23:42 [cityinfo.spiders.properties] INFO: page 103 -> 10 links (10 new)
+2026-09-21 11:23:47 [cityinfo.spiders.properties] INFO: page 104 -> 10 links (10 new)
+2026-09-21 11:23:51 [cityinfo.spiders.properties] INFO: page 105 -> 10 links (10 new)
+2026-09-21 11:23:55 [cityinfo.spiders.properties] INFO: page 106 -> 10 links (10 new)
+2026-09-21 11:23:58 [cityinfo.spiders.properties] INFO: page 107 -> 10 links (10 new)
+2026-09-21 11:24:10 [cityinfo.spiders.properties] INFO: page 108 -> 10 links (10 new)
+2026-09-21 11:24:16 [scrapy.extensions.logstats] INFO: Crawled 852 pages (at 55 pages/min), scraped 742 items (at 45 items/min)
+2026-09-21 11:24:17 [cityinfo.spiders.properties] INFO: page 109 -> 10 links (10 new)
+2026-09-21 11:24:23 [cityinfo.spiders.properties] INFO: page 110 -> 10 links (10 new)
+2026-09-21 11:24:29 [cityinfo.spiders.properties] INFO: page 111 -> 10 links (10 new)
+2026-09-21 11:24:32 [cityinfo.spiders.properties] INFO: page 112 -> 10 links (10 new)
+2026-09-21 11:24:38 [cityinfo.spiders.properties] INFO: page 113 -> 10 links (10 new)
+2026-09-21 11:24:44 [cityinfo.spiders.properties] INFO: page 114 -> 10 links (10 new)
+2026-09-21 11:24:50 [cityinfo.spiders.properties] INFO: page 115 -> 10 links (10 new)
+2026-09-21 11:24:59 [cityinfo.spiders.properties] INFO: page 116 -> 10 links (10 new)
+2026-09-21 11:25:04 [cityinfo.spiders.properties] INFO: page 117 -> 10 links (10 new)
+2026-09-21 11:25:16 [scrapy.extensions.logstats] INFO: Crawled 910 pages (at 58 pages/min), scraped 791 items (at 49 items/min)
+2026-09-21 11:25:19 [cityinfo.spiders.properties] INFO: page 118 -> 10 links (10 new)
+2026-09-21 11:25:23 [cityinfo.spiders.properties] INFO: page 119 -> 10 links (10 new)
+2026-09-21 11:25:42 [cityinfo.spiders.properties] INFO: page 120 -> 10 links (10 new)
+2026-09-21 11:25:50 [cityinfo.spiders.properties] INFO: page 121 -> 10 links (10 new)
+2026-09-21 11:25:56 [cityinfo.spiders.properties] INFO: page 122 -> 10 links (10 new)
+2026-09-21 11:26:02 [cityinfo.spiders.properties] INFO: page 123 -> 10 links (2 new)
+2026-09-21 11:26:07 [cityinfo.spiders.properties] INFO: page 124 -> 10 links (0 new)
+2026-09-21 11:26:07 [cityinfo.spiders.properties] INFO: Page 124 yielded zero new links; stopping pagination.
+2026-09-21 11:26:16 [scrapy.extensions.logstats] INFO: Crawled 956 pages (at 46 pages/min), scraped 830 items (at 39 items/min)
+2026-09-21 11:27:16 [scrapy.extensions.logstats] INFO: Crawled 1005 pages (at 49 pages/min), scraped 879 items (at 49 items/min)
+2026-09-21 11:28:16 [scrapy.extensions.logstats] INFO: Crawled 1040 pages (at 35 pages/min), scraped 914 items (at 35 items/min)
+2026-09-21 11:29:16 [scrapy.extensions.logstats] INFO: Crawled 1085 pages (at 45 pages/min), scraped 959 items (at 45 items/min)
+2026-09-21 11:30:16 [scrapy.extensions.logstats] INFO: Crawled 1114 pages (at 29 pages/min), scraped 988 items (at 29 items/min)
+2026-09-21 11:31:16 [scrapy.extensions.logstats] INFO: Crawled 1161 pages (at 47 pages/min), scraped 1035 items (at 47 items/min)
+2026-09-21 11:32:16 [scrapy.extensions.logstats] INFO: Crawled 1206 pages (at 45 pages/min), scraped 1080 items (at 45 items/min)
+2026-09-21 11:33:16 [scrapy.extensions.logstats] INFO: Crawled 1236 pages (at 30 pages/min), scraped 1110 items (at 30 items/min)
+2026-09-21 11:33:23 [cityinfo.sessions] INFO: Zyte session login succeeded (session init request).
+2026-09-21 11:34:16 [scrapy.extensions.logstats] INFO: Crawled 1250 pages (at 14 pages/min), scraped 1123 items (at 13 items/min)
+2026-09-21 11:34:35 [cityinfo.sessions] INFO: Zyte session login succeeded (session init request).
+2026-09-21 11:35:16 [scrapy.extensions.logstats] INFO: Crawled 1310 pages (at 60 pages/min), scraped 1182 items (at 59 items/min)
+2026-09-21 11:35:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-09-21 11:35:45 [cityinfo.spiders.properties] INFO: Spider closed (finished). Stats: {"start_time": "2026-09-21 05:38:16.587697+00:00", "log_count/INFO": 161, "memusage/startup": 104022016, "memusage/max": 201801728, "scheduler/enqueued/disk": 1386, "scheduler/enqueued": 1386, "scheduler/dequeued/disk": 1386, "scheduler/dequeued": 1386, "downloader/request_count": 1384, "downloader/request_method_count/GET": 1259, "downloader/request_bytes": 431078, "scrapy-zyte-api/request_args/browserHtml": 5, "scrapy-zyte-api/request_args/actions": 5, "scrapy-zyte-api/request_args/session": 1384, "scrapy-zyte-api/request_args/url": 1384, "scrapy-zyte-api/429": 0, "scrapy-zyte-api/attempts": 1384, "scrapy-zyte-api/errors": 21, "scrapy-zyte-api/fatal_errors": 21, "scrapy-zyte-api/processed": 1384, "scrapy-zyte-api/success": 1363, "scrapy-zyte-api/error_ratio": 0.015173410404624277, "scrapy-zyte-api/success_ratio": 0.9848265895953757, "scrapy-zyte-api/throttle_ratio": 0.0, "scrapy-zyte-api/mean_connection_seconds": 7.842327783100521, "scrapy-zyte-api/mean_response_seconds": 7.746912855265657, "scrapy-zyte-api/status_codes/200": 1363, "downloader/response_count": 1363, "downloader/response_status_count/200": 1363, "downloader/response_bytes": 285489934, "response_received_count": 1363, "scrapy-zyte-api/sessions/init/check-passed": 4, "scrapy-zyte-api/request_args/httpResponseBody": 1379, "scrapy-zyte-api/request_args/httpResponseHeaders": 1379, "scrapy-zyte-api/sessions/use/check-passed": 1359, "srp_cards_found": 1260, "request_depth_max": 123, "pages_crawled": 124, "downloader/request_method_count/POST": 125, "items_scraped": 1235, "items_written": 1235, "item_scraped_count": 1235, "scrapy-zyte-api/request_args/httpRequestMethod": 125, "scrapy-zyte-api/request_args/httpRequestBody": 125, "scrapy-zyte-api/request_args/customHttpRequestHeaders": 125, "scrapy-zyte-api/error_types/download/internal-error": 1, "scrapy-zyte-api/status_codes/521": 1, "downloader/exception_count": 28, "downloader/exception_type_count/zyte_api._errors.RequestError": 21, "scrapy-zyte-api/sessions/use/failed": 2, "retry/count": 20, "retry/reason_count/download_error": 2, "scrapy-zyte-api/error_types/problem/session-expired": 18, "scrapy-zyte-api/status_codes/422": 18, "scrapy-zyte-api/sessions/use/expired": 18, "retry/reason_count/session_expired": 18, "downloader/exception_type_count/builtins.RuntimeError": 7, "requests_failed": 7, "log_count/ERROR": 7, "scrapy-zyte-api/error_types/download/temporary-error": 2, "scrapy-zyte-api/status_codes/520": 2, "scrapy-zyte-api/sessions/init/failed": 1}
+2026-09-21 11:35:45 [cityinfo.spiders.properties] INFO: 
+=== Fill-rate report (output/properties.jsonl) ===
+Total items: 1235
+field                      non-null   fill %
+title                          1235   100.0%
+location                       1235   100.0%
+operator                       1200    97.2%
+type                           1235   100.0%
+available_seats                 257    20.8%  <-- under 80%
+address                          30     2.4%  <-- under 80%
+total_seats                      40     3.2%  <-- under 80%
+occupancy_certificate             0     0.0%  <-- under 80%
+fire_noc                          0     0.0%  <-- under 80%
+parking_facility                 20     1.6%  <-- under 80%
+total_built_up_area               9     0.7%  <-- under 80%
+area_available                    8     0.6%  <-- under 80%
+possession_status              1214    98.3%
+no_of_floors                    971    78.6%  <-- under 80%
+per_floor_area                  977    79.1%  <-- under 80%
+year_of_completion                6     0.5%  <-- under 80%
+about_project                  1235   100.0%
+floor_plan                        7     0.6%  <-- under 80%
+amenities                      1199    97.1%
+location_map                   1235   100.0%
+property_url                   1235   100.0%
+
+Duplicate property_url count: 0
+2026-09-21 11:35:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 28,
+ 'downloader/exception_type_count/builtins.RuntimeError': 7,
+ 'downloader/exception_type_count/zyte_api._errors.RequestError': 21,
+ 'downloader/request_bytes': 431078,
+ 'downloader/request_count': 1384,
+ 'downloader/request_method_count/GET': 1259,
+ 'downloader/request_method_count/POST': 125,
+ 'downloader/response_bytes': 285489934,
+ 'downloader/response_count': 1363,
+ 'downloader/response_status_count/200': 1363,
+ 'elapsed_time_seconds': 1648.7113339580028,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 9, 21, 6, 5, 45, 293966, tzinfo=datetime.timezone.utc),
+ 'item_scraped_count': 1235,
+ 'items_per_minute': 44.96359223300971,
+ 'items_scraped': 1235,
+ 'items_written': 1235,
+ 'log_count/ERROR': 7,
+ 'log_count/INFO': 163,
+ 'memusage/max': 201801728,
+ 'memusage/startup': 104022016,
+ 'pages_crawled': 124,
+ 'request_depth_max': 123,
+ 'requests_failed': 7,
+ 'response_received_count': 1363,
+ 'responses_per_minute': 49.62378640776699,
+ 'retry/count': 20,
+ 'retry/reason_count/download_error': 2,
+ 'retry/reason_count/session_expired': 18,
+ 'scheduler/dequeued': 1386,
+ 'scheduler/dequeued/disk': 1386,
+ 'scheduler/enqueued': 1386,
+ 'scheduler/enqueued/disk': 1386,
+ 'scrapy-zyte-api/429': 0,
+ 'scrapy-zyte-api/attempts': 1384,
+ 'scrapy-zyte-api/error_ratio': 0.015173410404624277,
+ 'scrapy-zyte-api/error_types/download/internal-error': 1,
+ 'scrapy-zyte-api/error_types/download/temporary-error': 2,
+ 'scrapy-zyte-api/error_types/problem/session-expired': 18,
+ 'scrapy-zyte-api/errors': 21,
+ 'scrapy-zyte-api/fatal_errors': 21,
+ 'scrapy-zyte-api/mean_connection_seconds': 7.842327783100521,
+ 'scrapy-zyte-api/mean_response_seconds': 7.746912855265657,
+ 'scrapy-zyte-api/processed': 1384,
+ 'scrapy-zyte-api/request_args/actions': 5,
+ 'scrapy-zyte-api/request_args/browserHtml': 5,
+ 'scrapy-zyte-api/request_args/customHttpRequestHeaders': 125,
+ 'scrapy-zyte-api/request_args/httpRequestBody': 125,
+ 'scrapy-zyte-api/request_args/httpRequestMethod': 125,
+ 'scrapy-zyte-api/request_args/httpResponseBody': 1379,
+ 'scrapy-zyte-api/request_args/httpResponseHeaders': 1379,
+ 'scrapy-zyte-api/request_args/session': 1384,
+ 'scrapy-zyte-api/request_args/url': 1384,
+ 'scrapy-zyte-api/sessions/init/check-passed': 4,
+ 'scrapy-zyte-api/sessions/init/failed': 1,
+ 'scrapy-zyte-api/sessions/use/check-passed': 1359,
+ 'scrapy-zyte-api/sessions/use/expired': 18,
+ 'scrapy-zyte-api/sessions/use/failed': 2,
+ 'scrapy-zyte-api/status_codes/200': 1363,
+ 'scrapy-zyte-api/status_codes/422': 18,
+ 'scrapy-zyte-api/status_codes/520': 2,
+ 'scrapy-zyte-api/status_codes/521': 1,
+ 'scrapy-zyte-api/success': 1363,
+ 'scrapy-zyte-api/success_ratio': 0.9848265895953757,
+ 'scrapy-zyte-api/throttle_ratio': 0.0,
+ 'srp_cards_found': 1260,
+ 'start_time': datetime.datetime(2026, 9, 21, 5, 38, 16, 587697, tzinfo=datetime.timezone.utc)}
+2026-09-21 11:35:45 [scrapy.core.engine] INFO: Spider closed (finished)
+
+=== Fill-rate report (output/properties.jsonl) ===
+Total items: 1235
+field                      non-null   fill %
+title                          1235   100.0%
+location                       1235   100.0%
+operator                       1200    97.2%
+type                           1235   100.0%
+available_seats                 257    20.8%  <-- under 80%
+address                          30     2.4%  <-- under 80%
+total_seats                      40     3.2%  <-- under 80%
+occupancy_certificate             0     0.0%  <-- under 80%
+fire_noc                          0     0.0%  <-- under 80%
+parking_facility                 20     1.6%  <-- under 80%
+total_built_up_area               9     0.7%  <-- under 80%
+area_available                    8     0.6%  <-- under 80%
+possession_status              1214    98.3%
+no_of_floors                    971    78.6%  <-- under 80%
+per_floor_area                  977    79.1%  <-- under 80%
+year_of_completion                6     0.5%  <-- under 80%
+about_project                  1235   100.0%
+floor_plan                        7     0.6%  <-- under 80%
+amenities                      1199    97.1%
+location_map                   1235   100.0%
+property_url                   1235   100.0%
+
+Duplicate property_url count: 0
